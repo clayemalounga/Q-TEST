@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.8 on win32)" generated="2026-10-09T20:14:31.305219" rpa="false" schemaversion="5">
+<suite id="s1" name="Authentification" source="C:\Users\poste\OneDrive\Desktop\Q&amp;Test\robot\exemple\authentification.robot">
+<kw name="Ouverture Navigateur" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:32.127023" level="INFO">Opening browser 'Edge' to base url 'https://automationplayground.com/crm/'.</msg>
+<arg>${URL}</arg>
+<arg>Edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-09T20:14:32.126454" elapsed="4.602307"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:38.730112" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:36.729253" elapsed="2.001177"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:14:38.732272" level="INFO">Ouverture du navigateur avec l'URL https://automationplayground.com/crm/</msg>
+<arg>Ouverture du navigateur avec l'URL ${URL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:14:38.730956" elapsed="0.001601"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:14:32.125111" elapsed="6.607874"/>
+</kw>
+<test id="s1-t1" name="CAS_LOGIN_NON_PASSANT1" line="17">
+<kw name="Scenario Login">
+<kw name="Survoler element login">
+<kw name="Mouse Up" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:38.739276" level="INFO">Simulating Mouse Up on element 'xpath=/html/body/nav/ul/li/a'.</msg>
+<arg>xpath=/html/body/nav/ul/li/a</arg>
+<doc>Simulates releasing the left mouse button on the element ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:38.738330" elapsed="0.322535"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:40.062586" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:39.061352" elapsed="1.001405"/>
+</kw>
+<kw name="Mouse Down" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:40.063428" level="INFO">Simulating Mouse Down on element 'xpath=/html/body/nav/ul/li/a'.</msg>
+<arg>xpath=/html/body/nav/ul/li/a</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:40.063025" elapsed="0.297533"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:41.363164" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:40.361375" elapsed="1.002234"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:14:41.366719" level="INFO">Survol du bouton de login</msg>
+<arg>Survol du bouton de login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:14:41.364973" elapsed="0.002123"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:14:38.737417" elapsed="2.630233"/>
+</kw>
+<kw name="Ouvrir la page de login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:41.370159" level="INFO">Clicking element 'xpath=/html/body/nav/ul/li/a'.</msg>
+<arg>xpath=/html/body/nav/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:41.369372" elapsed="0.504903"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:43.876026" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:41.874745" elapsed="2.001541"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:14:43.879599" level="INFO">Ouverture de la page de login</msg>
+<arg>Ouverture de la page de login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:14:43.877273" elapsed="0.002534"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:14:41.368298" elapsed="2.511852"/>
+</kw>
+<kw name="Verifier que la page contient Login">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:43.899119" level="INFO">Current page contains text 'Login'.</msg>
+<arg>Login</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-09T20:14:43.881223" elapsed="0.018107"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:45.900982" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:43.899742" elapsed="2.001717"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:14:45.902987" level="INFO">Verification de la page de login</msg>
+<arg>Verification de la page de login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:14:45.902130" elapsed="0.001038"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:14:43.880656" elapsed="2.022826"/>
+</kw>
+<kw name="Authentification de l'utilisateur">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:45.907685" level="INFO">Typing text 'invalidexample.comhhdjhsjds' into text field 'id=email-id'.</msg>
+<arg>id=email-id</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:45.906340" elapsed="0.220204"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:46.128030" level="INFO">Typing text 'pwd' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:46.127273" elapsed="0.145741"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:46.273697" level="INFO">Clicking button 'id=submit-id'.</msg>
+<arg>id=submit-id</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:46.273306" elapsed="0.124013"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:47.398416" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:46.397599" elapsed="1.000990"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:14:47.402760" level="INFO">Authentification de l'utilisateur en cours avec le nom d'utilisateur invalidexample.comhhdjhsjds et le mot de passe pwd</msg>
+<arg>Authentification de l'utilisateur en cours avec le nom d'utilisateur ${email} et le mot de passe ${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:14:47.398959" elapsed="0.003926"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-10-09T20:14:45.904297" elapsed="1.498747"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Verifier que l'utilisateur n'est pas connecté">
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:47.437445" level="INFO">Current page does not contain text 'Our Happy Customers'.</msg>
+<arg>Our Happy Customers</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2026-10-09T20:14:47.404822" elapsed="0.032743"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:49.438772" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:47.437824" elapsed="2.001116"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:14:49.439833" level="INFO">Vérification que l'utilisateur n'est pas connecté</msg>
+<arg>Vérification que l'utilisateur n'est pas connecté</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:14:49.439312" elapsed="0.000623"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:14:47.404359" elapsed="2.035775"/>
+</kw>
+<arg>'${expected_result}' == 'CONNECTE'</arg>
+<arg>Verifier que l'utilisateur est connecté</arg>
+<arg>ELSE</arg>
+<arg>Verifier que l'utilisateur n'est pas connecté</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-10-09T20:14:47.403418" elapsed="2.036830"/>
+</kw>
+<arg>${EMAIL_INVALIDE}</arg>
+<arg>${PASSWORD_VALIDE}</arg>
+<arg>NON_CONNECTE</arg>
+<status status="PASS" start="2026-10-09T20:14:38.735812" elapsed="10.704561"/>
+</kw>
+<doc>Un email invalide ne doit pas permettre la connexion.</doc>
+<status status="PASS" start="2026-10-09T20:14:38.733374" elapsed="10.707505"/>
+</test>
+<test id="s1-t2" name="CAS_LOGIN_NON_PASSANT2" line="21">
+<kw name="Scenario Login">
+<kw name="Survoler element login">
+<kw name="Mouse Up" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:49.444444" level="INFO">Simulating Mouse Up on element 'xpath=/html/body/nav/ul/li/a'.</msg>
+<arg>xpath=/html/body/nav/ul/li/a</arg>
+<doc>Simulates releasing the left mouse button on the element ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:49.444091" elapsed="0.309257"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:50.755707" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:49.753598" elapsed="1.002278"/>
+</kw>
+<kw name="Mouse Down" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:50.756556" level="INFO">Simulating Mouse Down on element 'xpath=/html/body/nav/ul/li/a'.</msg>
+<arg>xpath=/html/body/nav/ul/li/a</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:50.756161" elapsed="0.296497"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:52.054044" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:51.052992" elapsed="1.001530"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:14:52.057632" level="INFO">Survol du bouton de login</msg>
+<arg>Survol du bouton de login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:14:52.056044" elapsed="0.001916"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:14:49.443599" elapsed="2.614761"/>
+</kw>
+<kw name="Ouvrir la page de login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:52.061547" level="INFO">Clicking element 'xpath=/html/body/nav/ul/li/a'.</msg>
+<arg>xpath=/html/body/nav/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:52.060471" elapsed="0.232420"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:54.295060" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:52.293400" elapsed="2.001861"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:14:54.296553" level="INFO">Ouverture de la page de login</msg>
+<arg>Ouverture de la page de login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:14:54.295763" elapsed="0.000935"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:14:52.059080" elapsed="2.237809"/>
+</kw>
+<kw name="Verifier que la page contient Login">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:54.314719" level="INFO">Current page contains text 'Login'.</msg>
+<arg>Login</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-09T20:14:54.297933" elapsed="0.016972"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:56.316586" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:54.315255" elapsed="2.001754"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:14:56.319451" level="INFO">Verification de la page de login</msg>
+<arg>Verification de la page de login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:14:56.318039" elapsed="0.001715"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:14:54.297237" elapsed="2.022940"/>
+</kw>
+<kw name="Authentification de l'utilisateur">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:56.326696" level="INFO">Typing text 'admin@robotframeworktutorial.com' into text field 'id=email-id'.</msg>
+<arg>id=email-id</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:56.325233" elapsed="0.222416"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:56.549836" level="INFO">Typing text '' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:56.548783" elapsed="0.109138"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:56.658541" level="INFO">Clicking button 'id=submit-id'.</msg>
+<arg>id=submit-id</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:56.658179" elapsed="0.096528"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:57.755840" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:56.755078" elapsed="1.000929"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:14:57.756933" level="INFO">Authentification de l'utilisateur en cours avec le nom d'utilisateur admin@robotframeworktutorial.com et le mot de passe </msg>
+<arg>Authentification de l'utilisateur en cours avec le nom d'utilisateur ${email} et le mot de passe ${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:14:57.756379" elapsed="0.000632"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-10-09T20:14:56.321464" elapsed="1.435657"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Verifier que l'utilisateur n'est pas connecté">
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:57.780425" level="INFO">Current page does not contain text 'Our Happy Customers'.</msg>
+<arg>Our Happy Customers</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2026-10-09T20:14:57.758427" elapsed="0.022167"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:14:59.781916" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:14:57.780938" elapsed="2.001308"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:14:59.783505" level="INFO">Vérification que l'utilisateur n'est pas connecté</msg>
+<arg>Vérification que l'utilisateur n'est pas connecté</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:14:59.783001" elapsed="0.000605"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:14:57.758075" elapsed="2.025665"/>
+</kw>
+<arg>'${expected_result}' == 'CONNECTE'</arg>
+<arg>Verifier que l'utilisateur est connecté</arg>
+<arg>ELSE</arg>
+<arg>Verifier que l'utilisateur n'est pas connecté</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-10-09T20:14:57.757355" elapsed="2.026477"/>
+</kw>
+<arg>${EMAIL_VALIDE}</arg>
+<arg>${PASSWORD_INVALIDE}</arg>
+<arg>NON_CONNECTE</arg>
+<status status="PASS" start="2026-10-09T20:14:49.442945" elapsed="10.341152"/>
+</kw>
+<doc>Un mot de passe invalide ne doit pas permettre la connexion.</doc>
+<status status="PASS" start="2026-10-09T20:14:49.442012" elapsed="10.343208"/>
+</test>
+<test id="s1-t3" name="CAS_LOGIN_PASSANT" line="25">
+<kw name="Scenario Login">
+<kw name="Survoler element login">
+<kw name="Mouse Up" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:14:59.788409" level="INFO">Simulating Mouse Up on element 'xpath=/html/body/nav/ul/li/a'.</msg>
+<arg>xpath=/html/body/nav/ul/li/a</arg>
+<doc>Simulates releasing the left mouse button on the element ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:14:59.788062" elapsed="0.304294"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:15:01.093755" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:15:00.092734" elapsed="1.001254"/>
+</kw>
+<kw name="Mouse Down" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:15:01.094752" level="INFO">Simulating Mouse Down on element 'xpath=/html/body/nav/ul/li/a'.</msg>
+<arg>xpath=/html/body/nav/ul/li/a</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:15:01.094348" elapsed="0.306157"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:15:02.401823" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:15:01.400861" elapsed="1.001115"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:15:02.402720" level="INFO">Survol du bouton de login</msg>
+<arg>Survol du bouton de login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:15:02.402298" elapsed="0.000507"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:14:59.787690" elapsed="2.615230"/>
+</kw>
+<kw name="Ouvrir la page de login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:15:02.403901" level="INFO">Clicking element 'xpath=/html/body/nav/ul/li/a'.</msg>
+<arg>xpath=/html/body/nav/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:15:02.403590" elapsed="0.212300"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:15:04.617597" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:15:02.616299" elapsed="2.001580"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:15:04.619344" level="INFO">Ouverture de la page de login</msg>
+<arg>Ouverture de la page de login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:15:04.618520" elapsed="0.001029"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:15:02.403134" elapsed="2.216672"/>
+</kw>
+<kw name="Verifier que la page contient Login">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:15:04.644674" level="INFO">Current page contains text 'Login'.</msg>
+<arg>Login</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-09T20:15:04.621007" elapsed="0.023910"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:15:06.646627" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:15:04.645380" elapsed="2.001416"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:15:06.647668" level="INFO">Verification de la page de login</msg>
+<arg>Verification de la page de login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:15:06.647164" elapsed="0.000601"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:15:04.620242" elapsed="2.027662"/>
+</kw>
+<kw name="Authentification de l'utilisateur">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:15:06.649022" level="INFO">Typing text 'admin@robotframeworktutorial.com' into text field 'id=email-id'.</msg>
+<arg>id=email-id</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:15:06.648686" elapsed="0.179494"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:15:06.832333" level="INFO">Typing text 'pwd' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:15:06.828913" elapsed="0.111803"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:15:06.941308" level="INFO">Clicking button 'id=submit-id'.</msg>
+<arg>id=submit-id</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-09T20:15:06.940972" elapsed="0.608902"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:15:08.551448" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:15:07.550268" elapsed="1.001395"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:15:08.552919" level="INFO">Authentification de l'utilisateur en cours avec le nom d'utilisateur admin@robotframeworktutorial.com et le mot de passe pwd</msg>
+<arg>Authentification de l'utilisateur en cours avec le nom d'utilisateur ${email} et le mot de passe ${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:15:08.552159" elapsed="0.000897"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-10-09T20:15:06.648164" elapsed="1.905077"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Verifier que l'utilisateur est connecté">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-09T20:15:08.573547" level="INFO">Current page contains text 'Our Happy Customers'.</msg>
+<arg>Our Happy Customers</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-09T20:15:08.555578" elapsed="0.018158"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-09T20:15:10.575131" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-09T20:15:08.574066" elapsed="2.001232"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:15:10.576145" level="INFO">Vérification que l'utilisateur est connecté avec succès</msg>
+<arg>Vérification que l'utilisateur est connecté avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:15:10.575662" elapsed="0.000563"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:15:08.554961" elapsed="2.021373"/>
+</kw>
+<arg>'${expected_result}' == 'CONNECTE'</arg>
+<arg>Verifier que l'utilisateur est connecté</arg>
+<arg>ELSE</arg>
+<arg>Verifier que l'utilisateur n'est pas connecté</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-10-09T20:15:08.553683" elapsed="2.022732"/>
+</kw>
+<arg>${EMAIL_VALIDE}</arg>
+<arg>${PASSWORD_VALIDE}</arg>
+<arg>CONNECTE</arg>
+<status status="PASS" start="2026-10-09T20:14:59.787105" elapsed="10.789417"/>
+</kw>
+<doc>Un email et un mot de passe valides doivent permettre la connexion.</doc>
+<status status="PASS" start="2026-10-09T20:14:59.786235" elapsed="10.790755"/>
+</test>
+<kw name="Fermer le navigateur" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-09T20:15:10.578694" elapsed="2.933477"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-09T20:15:13.514080" level="INFO">Fermeture du navigateur</msg>
+<arg>Fermeture du navigateur</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-09T20:15:13.513033" elapsed="0.001304"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:15:10.578423" elapsed="2.936303"/>
+</kw>
+<status status="PASS" start="2026-10-09T20:14:31.308206" elapsed="42.206695"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Authentification" id="s1" pass="3" fail="0" skip="0">Authentification</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

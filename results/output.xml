@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.8 on win32)" generated="2026-10-08T20:13:17.801241" rpa="false" schemaversion="5">
+<suite id="s1" name="Q&amp;Test" source="C:\Users\poste\OneDrive\Desktop\Q&amp;Test">
+<suite id="s1-s1" name="Robot" source="C:\Users\poste\OneDrive\Desktop\Q&amp;Test\robot">
+<suite id="s1-s1-s1" name="Exemple" source="C:\Users\poste\OneDrive\Desktop\Q&amp;Test\robot\exemple">
+<suite id="s1-s1-s1-s1" name="Exempl" source="C:\Users\poste\OneDrive\Desktop\Q&amp;Test\robot\exemple\exempl.robot">
+<test id="s1-s1-s1-s1-t1" name="Open Browser and Verify Title" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-08T20:13:18.844731" level="INFO">Opening browser 'Edge' to base url 'https://robotcode.io/'.</msg>
+<arg>${URL}</arg>
+<arg>Edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-08T20:13:18.843532" elapsed="6.346350"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-08T20:13:30.192266" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-08T20:13:25.191214" elapsed="5.001573"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-08T20:13:30.217677" level="INFO">Current page contains text 'RobotCode'.</msg>
+<arg>RobotCode</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-08T20:13:30.193697" elapsed="0.024485"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-08T20:13:30.219156" elapsed="2.480270"/>
+</kw>
+<status status="PASS" start="2026-10-08T20:13:18.829124" elapsed="13.871199"/>
+</test>
+<status status="PASS" start="2026-10-08T20:13:18.058973" elapsed="14.655293"/>
+</suite>
+<status status="PASS" start="2026-10-08T20:13:18.033476" elapsed="14.690415"/>
+</suite>
+<status status="PASS" start="2026-10-08T20:13:18.018772" elapsed="14.717556"/>
+</suite>
+<status status="PASS" start="2026-10-08T20:13:17.832662" elapsed="14.946847"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Q&amp;Test" id="s1" pass="1" fail="0" skip="0">Q&amp;Test</stat>
+<stat name="Robot" id="s1-s1" pass="1" fail="0" skip="0">Q&amp;Test.Robot</stat>
+<stat name="Exemple" id="s1-s1-s1" pass="1" fail="0" skip="0">Q&amp;Test.Robot.Exemple</stat>
+<stat name="Exempl" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Q&amp;Test.Robot.Exemple.Exempl</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
