@@ -1,56 +1,320 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.14.8 on win32)" generated="2026-10-08T20:13:17.801241" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5 (Python 3.14.8 on win32)" generated="2026-10-15T20:37:34.100203" rpa="false" schemaversion="5">
 <suite id="s1" name="Q&amp;Test" source="C:\Users\poste\OneDrive\Desktop\Q&amp;Test">
-<suite id="s1-s1" name="Robot" source="C:\Users\poste\OneDrive\Desktop\Q&amp;Test\robot">
-<suite id="s1-s1-s1" name="Exemple" source="C:\Users\poste\OneDrive\Desktop\Q&amp;Test\robot\exemple">
-<suite id="s1-s1-s1-s1" name="Exempl" source="C:\Users\poste\OneDrive\Desktop\Q&amp;Test\robot\exemple\exempl.robot">
-<test id="s1-s1-s1-s1-t1" name="Open Browser and Verify Title" line="9">
+<suite id="s1-s1" name="Testcases" source="C:\Users\poste\OneDrive\Desktop\Q&amp;Test\testcases">
+<suite id="s1-s1-s1" name="Authentication" source="C:\Users\poste\OneDrive\Desktop\Q&amp;Test\testcases\authentication.robot">
+<test id="s1-s1-s1-t1" name="Cas1-Login correcte et mot de passe incorrect" line="5">
+<kw name="Ouvrir la page de connexion" owner="authentication">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-10-08T20:13:18.844731" level="INFO">Opening browser 'Edge' to base url 'https://robotcode.io/'.</msg>
+<msg time="2026-10-15T20:37:35.129490" level="INFO">Opening browser 'Edge' to base url 'https://automationplayground.com/crm/'.</msg>
 <arg>${URL}</arg>
-<arg>Edge</arg>
+<arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-10-08T20:13:18.843532" elapsed="6.346350"/>
+<status status="PASS" start="2026-10-15T20:37:35.128872" elapsed="8.896126"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-10-08T20:13:30.192266" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-10-08T20:13:25.191214" elapsed="5.001573"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-15T20:37:44.025600" elapsed="0.052632"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-08T20:13:30.217677" level="INFO">Current page contains text 'RobotCode'.</msg>
-<arg>RobotCode</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-10-08T20:13:30.193697" elapsed="0.024485"/>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-15T20:37:44.079600" level="INFO">Opening url 'https://automationplayground.com/crm/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-15T20:37:44.078865" elapsed="0.195956"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-10-08T20:13:30.219156" elapsed="2.480270"/>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2026-10-15T20:37:54.373204" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-15T20:37:54.373882" level="FAIL">Element 'id=j_username' did not appear in 10 seconds.</msg>
+<arg>${id_textbox_username}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2026-10-15T20:37:44.275209" elapsed="10.136606">Element 'id=j_username' did not appear in 10 seconds.</status>
 </kw>
-<status status="PASS" start="2026-10-08T20:13:18.829124" elapsed="13.871199"/>
+<status status="FAIL" start="2026-10-15T20:37:35.126834" elapsed="19.285513">Element 'id=j_username' did not appear in 10 seconds.</status>
+</kw>
+<kw name="Connexion utilisateur" owner="authentication">
+<arg>admin</arg>
+<arg>wrongpassword</arg>
+<status status="NOT RUN" start="2026-10-15T20:37:54.413349" elapsed="0.000467"/>
+</kw>
+<kw name="Vérifier que la connexion échoue" owner="authentication">
+<status status="NOT RUN" start="2026-10-15T20:37:54.414701" elapsed="0.002153"/>
+</kw>
+<kw name="Fermer la session" owner="authentication">
+<status status="NOT RUN" start="2026-10-15T20:37:54.417724" elapsed="0.000647"/>
+</kw>
+<tag>auth</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2026-10-15T20:37:35.112767" elapsed="19.306543">Element 'id=j_username' did not appear in 10 seconds.</status>
 </test>
-<status status="PASS" start="2026-10-08T20:13:18.058973" elapsed="14.655293"/>
+<test id="s1-s1-s1-t2" name="Cas2-Login incorrecte et mot de passe incorrecte" line="12">
+<kw name="Ouvrir la page de connexion" owner="authentication">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-15T20:37:54.480806" level="INFO">Opening browser 'Edge' to base url 'https://automationplayground.com/crm/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-15T20:37:54.480130" elapsed="4.861066"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-15T20:37:59.341670" elapsed="0.063352"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-15T20:37:59.405935" level="INFO">Opening url 'https://automationplayground.com/crm/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-15T20:37:59.405401" elapsed="0.202890"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2026-10-15T20:38:09.713888" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-15T20:38:09.715172" level="FAIL">Element 'id=j_username' did not appear in 10 seconds.</msg>
+<arg>${id_textbox_username}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2026-10-15T20:37:59.608817" elapsed="10.119003">Element 'id=j_username' did not appear in 10 seconds.</status>
+</kw>
+<status status="FAIL" start="2026-10-15T20:37:54.478201" elapsed="15.251470">Element 'id=j_username' did not appear in 10 seconds.</status>
+</kw>
+<kw name="Connexion utilisateur" owner="authentication">
+<arg>invaliduser</arg>
+<arg>wrongpassword</arg>
+<status status="NOT RUN" start="2026-10-15T20:38:09.731941" elapsed="0.000836"/>
+</kw>
+<kw name="Vérifier que la connexion échoue" owner="authentication">
+<status status="NOT RUN" start="2026-10-15T20:38:09.733778" elapsed="0.000367"/>
+</kw>
+<kw name="Fermer la session" owner="authentication">
+<status status="NOT RUN" start="2026-10-15T20:38:09.734856" elapsed="0.000299"/>
+</kw>
+<tag>auth</tag>
+<tag>sanity</tag>
+<status status="FAIL" start="2026-10-15T20:37:54.444392" elapsed="15.291458">Element 'id=j_username' did not appear in 10 seconds.</status>
+</test>
+<test id="s1-s1-s1-t3" name="Cas3-Creation d'un nouveau fournisseur apres connexion" line="19">
+<kw name="Ouvrir la page de connexion" owner="authentication">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-15T20:38:09.770900" level="INFO">Opening browser 'Edge' to base url 'https://automationplayground.com/crm/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-15T20:38:09.769912" elapsed="11.338736"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-15T20:38:21.111118" elapsed="0.060925"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-15T20:38:21.173602" level="INFO">Opening url 'https://automationplayground.com/crm/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-15T20:38:21.172759" elapsed="0.302313"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2026-10-15T20:38:23.660759" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=155.0.4283.45)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff672517275]
+	(No symbol) [0x7ff672466e34]
+	(No symbol) [0x7ff6728a6a0f]
+	(No symbol) [0x7ff6721d7292]
+	(No symbol) [0x7ff672265b44]
+	(No symbol) [0x7ff67227d7ff]
+	(No symbol) [0x7ff67223590c]
+	(No symbol) [0x7ff672234b8d]
+	(No symbol) [0x7ff672235733]
+	(No symbol) [0x7ff672371a91]
+	(No symbol) [0x7ff672381a78]
+	(No symbol) [0x7ff6725bff6a]
+	(No symbol) [0x7ff6725c65d1]
+	(No symbol) [0x7ff6724725dc]
+	(No symbol) [0x7ff67246d0f4]
+	(No symbol) [0x7ff67246d21a]
+	(No symbol) [0x7ff67245eba8]
+	(No symbol) [0x7ffe9404257d]
+	(No symbol) [0x7ffe9440af08]
+</msg>
+<msg time="2026-10-15T20:38:23.699216" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=155.0.4283.45)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff672517275]
+	(No symbol) [0x7ff672466e34]
+	(No symbol) [0x7ff6728a6a0f]
+	(No symbol) [0x7ff6721d7292]
+	(No symbol) [0x7ff672265b44]
+	(No symbol) [0x7ff67227d7ff]
+	(No symbol) [0x7ff67223590c]
+	(No symbol) [0x7ff672234b8d]
+	(No symbol) [0x7ff672235733]
+	(No symbol) [0x7ff672371a91]
+	(No symbol) [0x7ff672381a78]
+	(No symbol) [0x7ff6725bff6a]
+	(No symbol) [0x7ff6725c65d1]
+	(No symbol) [0x7ff6724725dc]
+	(No symbol) [0x7ff67246d0f4]
+	(No symbol) [0x7ff67246d21a]
+	(No symbol) [0x7ff67245eba8]
+	(No symbol) [0x7ffe9404257d]
+	(No symbol) [0x7ffe9440af08]
+</msg>
+<arg>${id_textbox_username}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2026-10-15T20:38:21.475500" elapsed="2.310961">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=155.0.4283.45)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff672517275]
+	(No symbol) [0x7ff672466e34]
+	(No symbol) [0x7ff6728a6a0f]
+	(No symbol) [0x7ff6721d7292]
+	(No symbol) [0x7ff672265b44]
+	(No symbol) [0x7ff67227d7ff]
+	(No symbol) [0x7ff67223590c]
+	(No symbol) [0x7ff672234b8d]
+	(No symbol) [0x7ff672235733]
+	(No symbol) [0x7ff672371a91]
+	(No symbol) [0x7ff672381a78]
+	(No symbol) [0x7ff6725bff6a]
+	(No symbol) [0x7ff6725c65d1]
+	(No symbol) [0x7ff6724725dc]
+	(No symbol) [0x7ff67246d0f4]
+	(No symbol) [0x7ff67246d21a]
+	(No symbol) [0x7ff67245eba8]
+	(No symbol) [0x7ffe9404257d]
+	(No symbol) [0x7ffe9440af08]
+</status>
+</kw>
+<status status="FAIL" start="2026-10-15T20:38:09.767932" elapsed="14.019407">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=155.0.4283.45)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff672517275]
+	(No symbol) [0x7ff672466e34]
+	(No symbol) [0x7ff6728a6a0f]
+	(No symbol) [0x7ff6721d7292]
+	(No symbol) [0x7ff672265b44]
+	(No symbol) [0x7ff67227d7ff]
+	(No symbol) [0x7ff67223590c]
+	(No symbol) [0x7ff672234b8d]
+	(No symbol) [0x7ff672235733]
+	(No symbol) [0x7ff672371a91]
+	(No symbol) [0x7ff672381a78]
+	(No symbol) [0x7ff6725bff6a]
+	(No symbol) [0x7ff6725c65d1]
+	(No symbol) [0x7ff6724725dc]
+	(No symbol) [0x7ff67246d0f4]
+	(No symbol) [0x7ff67246d21a]
+	(No symbol) [0x7ff67245eba8]
+	(No symbol) [0x7ffe9404257d]
+	(No symbol) [0x7ffe9440af08]
+</status>
+</kw>
+<kw name="Connexion utilisateur" owner="authentication">
+<arg>admin</arg>
+<arg>admin</arg>
+<status status="NOT RUN" start="2026-10-15T20:38:23.848384" elapsed="0.000515"/>
+</kw>
+<kw name="Vérifier que la connexion réussit" owner="authentication">
+<status status="NOT RUN" start="2026-10-15T20:38:23.924806" elapsed="0.000477"/>
+</kw>
+<kw name="Créer un nouveau fournisseur" owner="authentication">
+<status status="NOT RUN" start="2026-10-15T20:38:23.980701" elapsed="0.000762"/>
+</kw>
+<kw name="Saisir les informations du fournisseur" owner="authentication">
+<arg>fournisseur.test@example.com</arg>
+<arg>Jean</arg>
+<arg>Dupont</arg>
+<arg>Paris</arg>
+<arg>Alabama</arg>
+<status status="NOT RUN" start="2026-10-15T20:38:23.985851" elapsed="0.000504"/>
+</kw>
+<kw name="Vérifier retour vers la liste des fournisseurs" owner="authentication">
+<status status="NOT RUN" start="2026-10-15T20:38:23.987443" elapsed="0.000522"/>
+</kw>
+<kw name="Fermer la session" owner="authentication">
+<status status="NOT RUN" start="2026-10-15T20:38:23.988879" elapsed="0.000511"/>
+</kw>
+<tag>auth</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2026-10-15T20:38:09.756943" elapsed="14.233379">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=155.0.4283.45)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff672517275]
+	(No symbol) [0x7ff672466e34]
+	(No symbol) [0x7ff6728a6a0f]
+	(No symbol) [0x7ff6721d7292]
+	(No symbol) [0x7ff672265b44]
+	(No symbol) [0x7ff67227d7ff]
+	(No symbol) [0x7ff67223590c]
+	(No symbol) [0x7ff672234b8d]
+	(No symbol) [0x7ff672235733]
+	(No symbol) [0x7ff672371a91]
+	(No symbol) [0x7ff672381a78]
+	(No symbol) [0x7ff6725bff6a]
+	(No symbol) [0x7ff6725c65d1]
+	(No symbol) [0x7ff6724725dc]
+	(No symbol) [0x7ff67246d0f4]
+	(No symbol) [0x7ff67246d21a]
+	(No symbol) [0x7ff67245eba8]
+	(No symbol) [0x7ffe9404257d]
+	(No symbol) [0x7ffe9440af08]
+</status>
+</test>
+<status status="FAIL" start="2026-10-15T20:37:34.280146" elapsed="49.805384"/>
 </suite>
-<status status="PASS" start="2026-10-08T20:13:18.033476" elapsed="14.690415"/>
+<status status="FAIL" start="2026-10-15T20:37:34.267890" elapsed="49.831266"/>
 </suite>
-<status status="PASS" start="2026-10-08T20:13:18.018772" elapsed="14.717556"/>
-</suite>
-<status status="PASS" start="2026-10-08T20:13:17.832662" elapsed="14.946847"/>
+<status status="FAIL" start="2026-10-15T20:37:34.122266" elapsed="49.992648"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="3" skip="0">auth</stat>
+<stat pass="0" fail="1" skip="0">sanity</stat>
+<stat pass="0" fail="2" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="Q&amp;Test" id="s1" pass="1" fail="0" skip="0">Q&amp;Test</stat>
-<stat name="Robot" id="s1-s1" pass="1" fail="0" skip="0">Q&amp;Test.Robot</stat>
-<stat name="Exemple" id="s1-s1-s1" pass="1" fail="0" skip="0">Q&amp;Test.Robot.Exemple</stat>
-<stat name="Exempl" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Q&amp;Test.Robot.Exemple.Exempl</stat>
+<stat name="Q&amp;Test" id="s1" pass="0" fail="3" skip="0">Q&amp;Test</stat>
+<stat name="Testcases" id="s1-s1" pass="0" fail="3" skip="0">Q&amp;Test.Testcases</stat>
+<stat name="Authentication" id="s1-s1-s1" pass="0" fail="3" skip="0">Q&amp;Test.Testcases.Authentication</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2026-10-15T20:38:23.660759" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=155.0.4283.45)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff672517275]
+	(No symbol) [0x7ff672466e34]
+	(No symbol) [0x7ff6728a6a0f]
+	(No symbol) [0x7ff6721d7292]
+	(No symbol) [0x7ff672265b44]
+	(No symbol) [0x7ff67227d7ff]
+	(No symbol) [0x7ff67223590c]
+	(No symbol) [0x7ff672234b8d]
+	(No symbol) [0x7ff672235733]
+	(No symbol) [0x7ff672371a91]
+	(No symbol) [0x7ff672381a78]
+	(No symbol) [0x7ff6725bff6a]
+	(No symbol) [0x7ff6725c65d1]
+	(No symbol) [0x7ff6724725dc]
+	(No symbol) [0x7ff67246d0f4]
+	(No symbol) [0x7ff67246d21a]
+	(No symbol) [0x7ff67245eba8]
+	(No symbol) [0x7ffe9404257d]
+	(No symbol) [0x7ffe9440af08]
+</msg>
 </errors>
 </robot>

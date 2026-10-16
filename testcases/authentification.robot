@@ -11,7 +11,16 @@ ${URL}                 https://automationplayground.com/crm/
 ${EMAIL_VALIDE}        admin@robotframeworktutorial.com
 ${PASSWORD_VALIDE}     pwd
 ${EMAIL_INVALIDE}      invalidexample.comhhdjhsjds
-${PASSWORD_INVALIDE}       
+${PASSWORD_INVALIDE}
+
+# Variables pour la création d'un nouveau customer
+${nom}          Tata@gmail.com
+${prenom}       Toto
+${email}        exemple.claye@gmail.com
+${telephone}    +221 785818082
+${stateRegion}  Florida
+${gender}       male
+
 
 *** Test Cases ***
 CAS_LOGIN_NON_PASSANT1
@@ -26,10 +35,16 @@ CAS_LOGIN_PASSANT
     [Documentation]    Un email et un mot de passe valides doivent permettre la connexion.
     Scenario Login    ${EMAIL_VALIDE}    ${PASSWORD_VALIDE}    CONNECTE
 
+CAS_CREATION_CUSTOMER
+    [Documentation]    Création d'un nouveau customer.
+    Page de creation d'un nouveau customer
+    Creation d'un nouveau customer   ${nom}   ${prenom}    ${email}    ${telephone}   ${stateRegion}   ${gender}
+    Verifier que l'utilisateur est connecté
+
 *** Keywords ***
 Ouverture Navigateur
     Open Browser    ${URL}    Edge
-    Sleep    2
+    Sleep    1
     Log    Ouverture du navigateur avec l'URL ${URL}
 
 Survoler element login
@@ -41,12 +56,12 @@ Survoler element login
 
 Ouvrir la page de login
     Click Element    xpath=/html/body/nav/ul/li/a
-    Sleep    2
+    Sleep    1
     Log    Ouverture de la page de login
 
 Verifier que la page contient Login
     Page Should Contain    Login
-    Sleep    2
+    Sleep    1
     Log    Verification de la page de login
 
 Scenario Login
@@ -78,6 +93,28 @@ Verifier que l'utilisateur n'est pas connecté
     Page Should Not Contain    Our Happy Customers
     Sleep    2
     Log    Vérification que l'utilisateur n'est pas connecté
+
+#Creation d'un nouveau customer 
+
+Page de creation d'un nouveau customer
+    Click Element    id=new-customer
+    sleep    2
+    log    Ouverture de la page de création d'un nouveau customer
+
+Creation d'un nouveau customer
+    [Arguments]    ${nom}    ${prenom}    ${email}    ${telephone}   ${stateRegion}   ${gender}
+    Page Should Contain    Add Customer
+    Sleep    1
+    Input Text    id=EmailAddress    ${email}
+    Input Text    id=FirstName     ${prenom}
+    Input Text    id=LastName         ${nom}
+    Input Text    id=City         ${telephone}
+    Select From List By Label    id=StateOrRegion    ${stateRegion}
+    Select Radio Button    gender    ${gender}
+    Select Checkbox    name=promos-name  
+    Click Button   Submit
+    sleep    1
+    Log  Création d'un nouveau customer en cours 
 
 Fermer le navigateur
     Close Browser
